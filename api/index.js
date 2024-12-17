@@ -14,10 +14,13 @@ app.use(bodyParser.json());
 const jwt = require("jsonwebtoken");
 
 mongoose
-  .connect("mongodb+srv://sujan:sujan@cluster0.a5lhovy.mongodb.net/", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://nitin:nitin@cluster0.czx67.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log("Connected to MongoDB");
   })
@@ -26,7 +29,7 @@ mongoose
   });
 
 app.listen(port, () => {
-  console.log("Server is running on port 8000");
+  console.log("Server is running on port 3000");
 });
 
 const User = require("./models/user");
