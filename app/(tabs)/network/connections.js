@@ -30,7 +30,7 @@ const connections = () => {
   const fetchConnections = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/connections/${userId}`
+        `http://192.168.1.3:3000/connections/${userId}`
       );
       setConnections(response.data.connections);
     } catch (error) {

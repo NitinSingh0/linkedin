@@ -78,8 +78,8 @@ const sendVerificationEmail = async (email, verificationToken) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "sujananand0@gmail.com",
-      pass: "rnzcugnscqtqiefs",
+      user: "itinventrix@gmail.com",
+      pass: "kncj yjzx fcfa mqhh",
     },
   });
 
@@ -87,7 +87,7 @@ const sendVerificationEmail = async (email, verificationToken) => {
     from: "linkedin@gmail.com",
     to: email,
     subject: "Email Verification",
-    text: `please click the following link to verify your email : http://localhost:3000/verify/${verificationToken}`,
+    text: `please click the following link to verify your email : http://192.168.1.3:3000/verify/${verificationToken}`,
   };
 
   //send the mail

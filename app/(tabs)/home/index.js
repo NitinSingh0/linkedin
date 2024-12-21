@@ -39,7 +39,7 @@ const index = () => {
   const fetchUserProfile = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:3000/profile/${userId}`
+        `http://192.168.1.3:3000/profile/${userId}`
       );
       const userData = response.data.user;
       setUser(userData);
@@ -50,7 +50,7 @@ const index = () => {
   useEffect(() => {
     const fetchAllPosts = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/all");
+        const response = await axios.get("http://192.168.1.3:3000/all");
         setPosts(response.data.posts);
       } catch (error) {
         console.log("error fetching posts", error);
@@ -68,7 +68,7 @@ const index = () => {
   const handleLikePost = async (postId) => {
     try {
       const response = await axios.post(
-        `http://localhost:3000/like/${postId}/${userId}`
+        `http://192.168.1.3:3000/like/${postId}/${userId}`
       );
       if (response.status === 200) {
         const updatedPost = response.data.post;
